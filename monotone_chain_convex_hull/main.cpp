@@ -59,6 +59,7 @@ struct debugger
 typedef pair<double,double>          dd;
 typedef vector<pair<double,double>> vdd;
 
+//  cross-product  p1p2 x p1p3 > 0
 inline bool is_positive( const dd p1, const dd p2, const dd p3 ){
   return (p2.first - p1.first) * ( p3.second - p1.second ) - 
     ( p2.second - p1.second ) * ( p3.first - p1.first ) > 0;
