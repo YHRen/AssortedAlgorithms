@@ -55,15 +55,21 @@ struct debugger
 // std::ios::sync_with_stdio(false);
 /******* Actual Code Starts Here *********/
 
-
+#include "deCasteljau_subdivision.h"
 typedef pair<double,double>          dd;
-typedef vector<pair<double,double>> vdd;
+
+
+/* typedef vector<pair<double,double>> vdd;
 
 vdd deCasteljau_subdivide( 
     const vector<double> && x,
     const vector<double> && y,
     double x0,
     const int    mode = 1 ){
+  // a Bezier curve defined by control points {x,y}. 
+  // subdivide the curve at the fraction of x0.
+  // the output is a new set of control points defining the portion of the curve.
+  //
   // mode = 1, get left part,
   // mode = 2, get right part
   // mode = 3, get both parts
@@ -88,6 +94,7 @@ vdd deCasteljau_subdivide(
     case 1:
       return l;
     case 2:
+      reverse(all(r));
       return r;
     default:
       l.insert(l.end(), make_move_iterator(r.rbegin()),
@@ -95,6 +102,8 @@ vdd deCasteljau_subdivide(
       return l;
   }
 }
+
+*/
 int main( int argc, char * argv[] ){
   vector<double> x,y;
   double scale = 3.0;

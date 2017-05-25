@@ -56,8 +56,11 @@ struct debugger
 // std::ios::sync_with_stdio(false);
 /******* Actual Code Starts Here *********/
 
+#include "monotone_chain_convex_hull.h"
+
 typedef pair<double,double>          dd;
-typedef vector<pair<double,double>> vdd;
+/*
+ * typedef vector<pair<double,double>> vdd;
 
 //  cross-product  p1p2 x p1p3 > 0
 inline bool is_positive( const dd p1, const dd p2, const dd p3 ){
@@ -106,6 +109,7 @@ vdd monotone_chain(const vector<double>&& x, const vector<double>&& y) {
   copy(all(U), back_inserter(rtn));
   return rtn;
 }
+*/
 
 int main(int argc, char* argv[]) {
   dd p1 = {1,0};
